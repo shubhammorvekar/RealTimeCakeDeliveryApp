@@ -1,0 +1,36 @@
+@import "./_var";
+
+body{
+    font-family:'roboto','sans-serif';
+    background: $links-body;
+    color: $font;
+}
+nav{
+    background: $primary;
+    color: $links-body;
+}
+nav li:last-child a i{
+    color: $icon;
+    font-size: 2rem;
+    &:hover{
+        color: $body;
+    }
+}
+nav li a{
+    transition: all .3 sec ease-in-out ;
+    &:hover{
+        color: $body;
+    }
+}
+.menu{
+    background:$primary;
+    color:$ordersection;
+}
+.slider button{
+    background:$button;
+    color:$body;
+}
+.menu button{
+    background:$button;
+    color:$body;
+}

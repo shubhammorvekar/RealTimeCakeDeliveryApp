@@ -1,0 +1,40 @@
+body {
+  font-family: "roboto", "sans-serif";
+  background: #FFF0F3;
+  color: #FF758F;
+}
+
+nav {
+  background: #FFB3C1;
+  color: #FFF0F3;
+}
+
+nav li:last-child a i {
+  color: #FFF0F3;
+  font-size: 2rem;
+}
+nav li:last-child a i:hover {
+  color: #fff;
+}
+
+nav li a {
+  transition: all 0.3 sec ease-in-out;
+}
+nav li a:hover {
+  color: #fff;
+}
+
+.menu {
+  background: #FFB3C1;
+  color: #F4F4E1;
+}
+
+.slider button {
+  background: #FF758F;
+  color: #fff;
+}
+
+.menu button {
+  background: #FF758F;
+  color: #fff;
+}
