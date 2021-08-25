@@ -1,0 +1,25 @@
+//1. file strutiring
+//2. installing npm packages
+    -express
+    -express-ejs-layouts
+    -ejs
+//3. installing laravel-mix webpack 
+//4. Creating home pages with tailwindcss
+//5. Creating cart pages(empty and orders summary)
+//6. Creating login and register pages
+//7. Move all routes to routing files
+8. Create dedicated controllers
+9. Add to cart functionality
+    - connect to mongo db
+    - use connect mongo for sesssion store
+        -dependencies
+        -mongoose,express-session,connect-mongo,dotenv
+        -
+    -axios to send ajax request
+    -installing notification library npm i noty
+10.Create order controller and link it to server
+11.Create order view with table for customer and admin
+12.Create order single page with status
+13.Create login page with routes
+14.Create register page with routes
+15.Build register CRUD 

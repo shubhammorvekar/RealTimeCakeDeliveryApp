@@ -11,18 +11,7 @@ app.use(ejsLayouts);
 app.set('views', path.join(__dirname, "/resources/views"));
 app.set("view engine","ejs");
 
-app.get("/", (req,res) => {
-    res.render("home");
-});
-app.get("/register",(req,res) =>{
-    res.render("auth/register");
-});
-app.get("/login",(req,res) =>{
-    res.render("auth/login");
-});
-app.get("/cart", (req,res) => {
-    res.render("customers/cart");
-});
+require("./routes/web")(app);
 
 // set server 
 app.listen(port, () => {
