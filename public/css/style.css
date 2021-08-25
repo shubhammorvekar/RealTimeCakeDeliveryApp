@@ -29,12 +29,7 @@ nav li a:hover {
   color: #F4F4E1;
 }
 
-.slider button {
-  background: #FF758F;
-  color: #fff;
-}
-
-.menu button {
+.primarybutton {
   background: #FF758F;
   color: #fff;
 }

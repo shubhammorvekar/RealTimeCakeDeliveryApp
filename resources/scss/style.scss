@@ -10,7 +10,7 @@ nav{
     color: $links-body;
 }
 nav li:last-child a i{
-    color: $icon;
+    color:$links-body;
     font-size: 2rem;
     &:hover{
         color: $body;
@@ -26,11 +26,7 @@ nav li a{
     background:$primary;
     color:$ordersection;
 }
-.slider button{
-    background:$button;
-    color:$body;
-}
-.menu button{
+.primarybutton{
     background:$button;
     color:$body;
 }

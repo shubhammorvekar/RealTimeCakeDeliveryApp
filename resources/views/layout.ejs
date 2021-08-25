@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="container mx-auto flex items-center justify-between py-5"> 
+        <div class="logo">
+            <a href="/"><img src="/img/logo.png" alt="Company logo"></a>
+         </div>
+        <div class="list">
+            <ul class="flex items-center">
+                <li class="ml-10"><a href="/offer">Offer</a></li>
+                <li class="ml-10"><a href="register">Register</a></li>
+                <li class="ml-10"><a href="/login">Login</a></li>
+                <li class="ml-10"><a href="#">Offer</a></li>
+                <li class="ml-10"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <%- body%>
+    <script src="/js/client.js"></script>
+</body>
+</html>
