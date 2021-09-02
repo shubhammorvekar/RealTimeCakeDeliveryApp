@@ -10,136 +10,26 @@
             </div>
         </div>
     </section>
-
     <section class="menu py-10">
         <h1 class="font-bold text-4xl text-center">Order Cakes</h1>
         <div class="container mx-auto grid grid-cols-4">
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="w-full primarybutton inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
 
+          <%cakes.forEach(function(cake){%>
             <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
+              <!--Card 1-->
+              <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full" src="/img/<%= cake.image %>" alt="cake">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 text-center"><%= cake.name %></div>
+                  <p class="text-gray-500 text-base text-center">
+                    <%= cake.size %>
+                  </p>
+                  <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700">₹ <%= cake.price %></h2>
+                  <button data-cake="<%=JSON.stringify(cake)%>" class="primarybutton add-cart inline-block text-center w-full  rounded-full px-8  py-1 text-sm font-semibold mb-2">Add</button>
                 </div>
-            </div>
-
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
-
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
-
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
-            
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
-
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton w-full inline-block text-center  rounded-full px-8  py-1 text-sm font-semibold  mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
-
-            <div class="p-10">  
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <img class="w-full" src="/img/cake.jpg" alt="cake">
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Mountain</div>
-                    <p class="text-gray-500 text-base text-center">
-                      small
-                    </p>
-                    <h2 class="text-center px-3 py-3 text-xl font-semibold text-gray-700"> ₹ 350</h2>
-                    <button class="primarybutton inline-block text-center w-full  rounded-full px-8  py-1 text-sm font-semibold mb-2">Add</button>
-                  </div>
-                  
-                </div>
-            </div>
+                
+              </div>
+          </div>
+          <%})%>
         </div>
     </section>

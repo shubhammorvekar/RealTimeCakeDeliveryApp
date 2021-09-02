@@ -1,4 +1,6 @@
 @import "./_var";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 body{
     font-family:'roboto','sans-serif';
@@ -30,3 +32,4 @@ nav li a{
     background:$button;
     color:$body;
 }
+
