@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const session = require('express-session');
 const flash = require("express-flash");
 const MongoStore = require('connect-mongo');
-const { Cookie } = require("express-session");
+const passport = require("passport");
 
 //DataBase connection
 const url = "mongodb://localhost:27017/cakeDB"
@@ -29,9 +29,16 @@ app.use(session({
     // cookie:{maxAge:1000*15}
     
 }))
+//passport configg
+const passwordInit = require("./app/config/passport");
+passwordInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 app.use(flash());
-
+//assets
+app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(express.static("public"));
 //setting ejs templates
@@ -41,6 +48,7 @@ app.set("view engine","ejs");
 //global middlewares
 app.use((req,res,next)=>{
     res.locals.session = req.session;
+    res.locals.user = req.user;
     next();
 });
 

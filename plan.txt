@@ -18,10 +18,10 @@
         -
     //-axios to send ajax request
     //-installing notification library npm i noty
-10. Build register CRUD
+//10. Build register CRUD
     - dependencies express-flash express-session dotenv
     - status code 
-11. Build login using passport
+//11. Build login using passport
     -installing dependencies passport passport-local express-session
     
 10.Create order controller and link it to server
