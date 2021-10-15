@@ -10,13 +10,16 @@ const session = require('express-session');
 const flash = require("express-flash");
 const MongoStore = require('connect-mongo');
 const passport = require("passport");
-
+const Emitter = require("events");
 //DataBase connection
 const url = "mongodb://localhost:27017/cakeDB"
 mongoose.connect(url, {useNewUrlParser: true})
 mongoose.connection.once("open",()=>{
     console.log("database connected succesfully")
 })
+// Event Emitter
+const eventEmitter = new Emitter()
+app.set("eventEmitter",eventEmitter)
 
 //session configuration
 app.use(session({
@@ -52,10 +55,26 @@ app.use((req,res,next)=>{
     next();
 });
 
-//rotes
+//routes
 require("./routes/web")(app);
 
 // set server 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`server is running on ${port}`);
 });
+
+//
+const io = require("socket.io")(server)
+io.on("connection",(socket)=>{
+    socket.on("join",(roomIdCreate) => {
+        socket.join(roomIdCreate)
+    })
+})
+
+eventEmitter.on("orderUpdated",(data)=>{
+    io.to(`order_${data.id}`).emit("orderUpdated",data)
+})
+
+eventEmitter.on("orderPlaced",(data)=>{
+    io.to("adminRoom").emit("orderPlaced",data)    
+})

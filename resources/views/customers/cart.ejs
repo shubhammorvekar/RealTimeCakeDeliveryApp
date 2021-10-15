@@ -25,16 +25,19 @@
                 <span class="text-lg font-bold px-4 rounded-lg">Total Amount :</span>
                 <span class="text-lg font-bold px-4 rounded-lg bg-red-200">₹ <%=session.cart.totalPrc%></span>
             </div>
+            <%if(user) {%>
             <div class="form my-6">
-                <form action="#">
-                    <input class="inline-block border border-gray-300 p-1 w-1/2 mb-3 rounded-lg focus:outline-none focus:border-red-300" type="tel" name="" id="" placeholder="Enter your mobile no">
-                    <input  class="border border-gray-300 p-1 w-1/2 rounded-lg focus:outline-none focus:border-red-300" type="text" placeholder="Enter your address">
+                <form action="/orders" method="POST">
+                    <input class="inline-block border border-gray-300 p-1 w-1/2 mb-3 rounded-lg focus:outline-none focus:border-red-300" type="tel" name="phone" id="" placeholder="Enter your mobile no">
+                    <input  class="border border-gray-300 p-1 w-1/2 rounded-lg focus:outline-none focus:border-red-300" type="text" name="address" placeholder="Enter your address">
                     <div>
-                        <!-- <button class="primarybutton rounded-full my-4 px-6 py-2 text-sm font-semibold ">Order It Now</button> -->
+                        <button class="primarybutton rounded-full my-4 px-6 py-2 text-sm font-semibold ">Order It Now</button>
                     </div>
                 </form>
             </div>
-            <a class="primarybutton rounded-full my-4 px-6 py-2 text-sm font-semibold " href="#">Login to continue</a>
+            <%} else {%>
+            <a class="primarybutton rounded-full my-4 px-6 py-2 text-sm font-semibold " href="/login">Login to continue</a>
+            <%}%>
         </div>
     </div>
     <%}else{%>
